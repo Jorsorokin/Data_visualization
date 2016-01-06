@@ -27,13 +27,16 @@ function [hL,hF] = fillPlot(mat,varargin)
 %
 %
 %   Example:
-%       mat = rand(10,1000); 
+%       figure; hold on;
+%       data1 = rand(10,1000); 
+%       data2 = 0.5*rand(10,1000) + repmat(0.25*sin(linspace(0,4*pi,1000)),10,1);
 %       err = 'sd';
 %       lineCol = 'b';
-%       edgeCol = [.3 .3 .3];
-%       [hL,hF] = fillPlot(mat,[],err,lineCol,edgeCol)
-%           % plots average of 10 random vectors +/- SD
-%           % with blue line, light blue fill, and gray edge of fill
+%       lineCol2 = 'k';
+%       faceCol = [.8 0 .2];
+%
+%       [hL,hF] = fillPlot(data1,[],err,lineCol);
+%       [hL2,hF2] = fillPlot(data2,[],err,lineCol2,[],faceCol,.5);
 %           
 %----------------------------------------------------------------------------------
 

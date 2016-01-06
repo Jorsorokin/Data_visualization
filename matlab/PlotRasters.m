@@ -17,7 +17,7 @@ function [rH] = PlotRasters(SpikeTimes,start,varargin)
 %       spiketimes are relative (i.e. blocks of spikeitmes, each block relative
 %       to stim onset), then user should define "start" as the time of the
 %       onset of the stim relative to the start of the block. For instance, if
-%       stim is 6 seconds into the start of eah block, then set "start" = 6.
+%       stim is 6 seconds into the start of each trial, then set "start" = 6.
 %       * if spikes NOT relative, start = nx1 array of starting times.
 % Optional:
 %   pre_time = time (in SECONDS) to subtract from starting time...
@@ -33,7 +33,7 @@ function [rH] = PlotRasters(SpikeTimes,start,varargin)
 %
 % Example:
 %   SpikeTimes{1} = sort(randn(100));
-%   SpikeTimes{2} = sort(randn(clc100));
+%   SpikeTimes{2} = sort(randn(100));
 %   PlotRasters(SpikeTimes,.5,.2,0.5,.4,'control',1)
 %       % plots a raster of SpikeTimes for each channel
 %       % specifying 0.5s as the relative event onset 
